@@ -1,0 +1,204 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #f8f9fa !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #333 !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover and Active Link Bar Effect */
+.custom-navbar .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover::before,
+.custom-navbar .navbar-nav .nav-item.active .nav-link::before {
+    width: 100%;
+}
+
+/* Active Link Styling */
+.custom-navbar .navbar-nav .nav-item.active .nav-link {
+    color: #007bff !important;
+    font-weight: 600;
+}
+
+/* Navbar Brand */
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #007bff !important;
+}
+
+.navbar-toggler {
+    border-color: #007bff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #007bff !important;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Smooth Transition on Navbar Item Hover */
+.navbar-nav .nav-item {
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover {
+    transform: scale(1.05);
+}
+
+/* Image Slider Styling */
+.image-slider {
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    height: 250px; /* Adjust the height as needed */
+}
+
+.slider-container {
+    display: flex;
+    position: absolute;
+    width: 300%; /* 3 images, so total width = 3 times the viewport width */
+}
+
+.slider-image {
+    width: 100vw;  /* Full width of the viewport */
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+    opacity: 0;  /* Initially invisible */
+    animation: simple-slide 5s infinite;
+}
+
+/* Apply the animation to each image with a delay to create a sequence */
+.image-slider .slider-container .slider-image:nth-child(1) {
+    animation: simple-slide 4s infinite;
+    animation-delay: 0s;
+}
+
+.image-slider .slider-container .slider-image:nth-child(2) {
+    animation: simple-slide 4s infinite;
+    animation-delay: 4s;
+}
+
+.image-slider .slider-container .slider-image:nth-child(3) {
+    animation: simple-slide 4s infinite;
+    animation-delay: 8s;
+}
+
+/* Keyframes for simple Image Slider Animation */
+@keyframes simple-slide {
+    0%, 100% {
+        transform: translateX(70%);  /* Start off-screen to the right */
+        opacity: 0;  /* Start invisible */
+    }
+    20% {
+        transform: translateX(0);  /* Move to the center */
+        opacity: 0;  /* Fully visible */
+    }
+    80% {
+        transform: translateX(0);  /* Stay in the center */
+        opacity: 0;  /* Remain visible */
+    }
+    100% {
+        transform: translateX(-100%);  /* Slide out to the left */
+        opacity: 0;  /* Fade out */
+    }
+}
+
+/* Modal styling */
+.modal-content {
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Button styling for Read More */
+#readMoreBtn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* About Section Styling */
+.about-aiSEL h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+.professor{
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/* styles.css */
+
+/* Construction Animation Container */
+.construction-animation {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Center the SVG animation */
+.svg-container svg {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/* Style for the text */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
